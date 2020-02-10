@@ -1,0 +1,126 @@
+custom_header:
+  compact_mode: true
+background: var(--background-image)
+resources:
+  - url: /community_plugin/weather-card/weather-card.js
+    type: module
+  - url: /community_plugin/custom-header/custom-header.js
+    type: module
+  - url: /community_plugin/lovelace-card-mod/card-mod.js
+    type: module
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+    type: js
+  - url: /community_plugin/unused-card/unused-card.js
+    type: module
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    type: module
+    
+    
+title: My Awesome Home
+views:
+  - icon: mdi:home-assistant
+    cards:
+
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            entity: person.fraser
+            show_name: false
+            show_state: false
+            show_info: false
+            state_image:
+                "home": /local/assets/people/fb2.png
+                "not_home": /local/assets/people/fraser2.png
+            tap_action:
+                action: none
+            style: |
+             ha-card {
+              border: solid 5px  var(--primary-color);
+              border-radius: 150px;
+              box-shadow: '3px 3px rgba(0,0,0,0.4)';
+              overflow: hidden;
+             }
+          - type: picture-entity
+            entity: person.julie
+            show_name: false
+            show_state: false
+            show_info: false
+            state_image:
+                "home": /local/assets/people/fb2.png
+                "not_home": /local/assets/people/fraser2.png
+            tap_action:
+                action: none
+            style: |
+             ha-card {
+              border: solid 5px  var(--primary-color);
+              border-radius: 150px;
+              box-shadow: '3px 3px rgba(0,0,0,0.4)';
+              overflow: hidden;
+             }
+      - type: custom:weather-card
+        entity: weather.dark_sky
+        name: Dundee
+             
+      - type: glance
+        entities:   
+            - sensor.hacs
+            - binary_sensor.updater
+            
+      - type: custom:mini-media-player
+        entity: media_player.bedroom_speaker
+        icon: mdi:spotify
+        artwork: cover
+        hide:
+          volume: true
+          source: true
+          power_state: false
+        
+      - type: custom:mini-media-player
+        entity: media_player.living_room_speaker
+        icon: mdi:spotify
+        artwork: cover
+        hide:
+         volume: true
+         source: true
+         power_state: false     
+
+           
+  - title: Lighting
+  
+  - title: Automations
+  
+  - title: Status
+    cards:
+      - type: custom:vertical-stack-in-card
+        title: Hass.io Status
+        cards:
+            - type: entities
+              entities:
+                - sensor.current_version
+                - sensor.uptime
+                - sensor.potential_breaking_changes
+                - sensor.last_boot
+                - sensor.disk_use_home
+            - type: glance
+              entities:
+                - sensor.processor_use
+                - sensor.memory_free
+                - s.     ensor.memory_use
+  
+  - title: Testing
+    cards:
+    
+      - type: custom:unused-card
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

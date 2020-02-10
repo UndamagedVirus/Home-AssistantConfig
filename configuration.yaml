@@ -1,0 +1,53 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  customize: !include customize.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+lovelace:
+  mode: yaml
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use
+        arg: /home
+      - type: memory_free
+      - type: memory_use
+      - type: last_boot
+      - type: processor_use
+
+  - platform: version
+  - platform: uptime
+  
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+    mode: daily
+
+panel_iframe:
+  tautulli:
+    title: Tautulli
+    icon: mdi:filmstrip
+    url: http://hassio.local:8181
+    
+    
+    
+breaking_changes:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
