@@ -1,4 +1,4 @@
-# Home-AssistantConfig
+# UndamagedVirus Home Assistant 
 
 Hardware Used:
 
