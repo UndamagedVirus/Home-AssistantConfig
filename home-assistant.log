@@ -1,2 +1,3 @@
 2020-02-11 03:35:50 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
 2020-02-11 03:35:50 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for breaking_changes which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2020-02-11 04:48:13 WARNING (Thread-2) [pychromecast.socket_client] [Living Room speaker:8009] Heartbeat timeout, resetting connection
