@@ -19,3 +19,7 @@
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+home-assistant_v2.db
+home-assistant.log
+HA.code-workspace
+HA.workspace
