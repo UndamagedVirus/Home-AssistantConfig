@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "\\\\192.168.0.21\\config"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "files.associations": {
+            "*.yaml": "home-assistant"
+        },
+        "files.autoSave": "onFocusChange",
+        "workbench.tree.renderIndentGuides": "always",
+        "editor.renderWhitespace": "all"
+    }
+}
+ 

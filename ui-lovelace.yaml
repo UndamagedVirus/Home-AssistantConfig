@@ -105,7 +105,7 @@ views:
               entities:
                 - sensor.processor_use
                 - sensor.memory_free
-                - s.     ensor.memory_use
+                - sensor.memory_use
   
   - title: Testing
     cards:
