@@ -1,6 +1,6 @@
 # UndamagedVirus Home Assistant 
-![shield3](https://img.shields.io/github/last-commit/UndamagedVirus/Home-AssistantConfig.svg "last-commit")
-![shield2](https://img.shields.io/github/commit-activity/y/UndamagedVirus/Home-AssistantConfig)
+![shield1](https://img.shields.io/github/last-commit/UndamagedVirus/Home-AssistantConfig.svg "last-commit")
+![shield2](https://img.shields.io/github/commit-activity/y/UndamagedVirus/Home-AssistantConfig "commit-activity")
 
 Hardware Used:
 
