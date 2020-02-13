@@ -25,8 +25,7 @@ sensor:
       - type: processor_use
 
   - platform: version
-  - platform: uptime
-  
+  - platform: uptime  
 
 weather:
   - platform: darksky
