@@ -25,12 +25,29 @@ sensor:
       - type: processor_use
 
   - platform: version
-  - platform: uptime  
+  - platform: uptime 
+ 
+  - platform: waqi
+    token: !secret waqi
+    locations:
+      - dundee
 
 weather:
   - platform: darksky
     api_key: !secret darksky
     mode: daily
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+spotify:
+  client_id: !secret spotifyid
+  client_secret: !secret spotifysecret
 
 panel_iframe:
   tautulli:
@@ -38,6 +55,7 @@ panel_iframe:
     icon: mdi:filmstrip
     url: http://hassio.local:8181
     
+
     
     
 breaking_changes:

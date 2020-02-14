@@ -14,11 +14,17 @@ resources:
     type: module
   - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
     type: module
-    
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/swipe-card/swipe-card.js
+    type: module
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+    type: module
+  - url: /local/slider-entity-row.js
+    type: module
     
 title: My Awesome Home
 views:
   - icon: mdi:home-assistant
+    path: Home
     cards:
 
       - type: horizontal-stack
@@ -57,39 +63,84 @@ views:
               box-shadow: '3px 3px rgba(0,0,0,0.4)';
               overflow: hidden;
              }
+             
       - type: custom:weather-card
         entity: weather.dark_sky
         name: Dundee
-             
+
+
+      - type: custom:mini-graph-card
+        entities:
+            - sensor.speedtest_ping
+            - sensor.speedtest_upload
+            - sensor.speedtest_download
+        name: Speedtest
+        hours_to_show: 72
+        show:
+         icon: false
+         name: true
+         state: false
+         graph: bar
+
+
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: custom:weather-card
+            entity: weather.dark_sky
+            name: Dundee
+            
+          - type: custom:mini-graph-card
+            name: Air Quality
+            hours_to_show: 24
+            entities:
+                - sensor.waqi_dundee_broughty_ferry_road_united_kingdom
+            animate: true
+            decimals: 1
+            align_state: center
+            show:
+             points: hover
+             average: true
+      
+
       - type: glance
         entities:   
-            - sensor.hacs
             - binary_sensor.updater
-            
-      - type: custom:mini-media-player
-        entity: media_player.bedroom_speaker
-        icon: mdi:spotify
-        artwork: cover
-        hide:
-          volume: true
-          source: true
-          power_state: false
-        
-      - type: custom:mini-media-player
-        entity: media_player.living_room_speaker
-        icon: mdi:spotify
-        artwork: cover
-        hide:
-         volume: true
-         source: true
-         power_state: false     
+                
+
+      - type: vertical-stack
+        cards:
+          - type: custom:mini-media-player
+            entity: media_player.bedroom_speaker
+            icon: mdi:spotify
+            artwork: cover
+            hide:
+              volume: true
+              source: true
+              power_state: false
+          - type: custom:mini-media-player
+            entity: media_player.living_room_speaker
+            icon: mdi:spotify
+            artwork: cover
+            hide:
+             volume: true
+             source: true
+             power_state: false     
 
            
-  - title: Lighting
+  - icon: mdi:lightbulb-on
+    path: Lighting 
   
   - title: Automations
+    path: Automations
+    cards:
+    
+      - type: entities
+        entities: 
+            - automation.leaving_work
+        
   
-  - title: Status
+  - icon: mdi:raspberry-pi
+    path: Status
     cards:
       - type: custom:vertical-stack-in-card
         title: Hass.io Status
@@ -99,6 +150,7 @@ views:
                 - sensor.current_version
                 - sensor.uptime
                 - sensor.potential_breaking_changes
+                - sensor.hacs
                 - sensor.last_boot
                 - sensor.disk_use_home
             - type: glance
@@ -108,9 +160,16 @@ views:
                 - sensor.memory_use
   
   - title: Testing
+    path: Testing
     cards:
     
       - type: custom:unused-card
+      
+      - type: entities
+        entities:
+            - sun.sun
+            - weather.home
+            - binary_sensor.remote_ui
       
       
       

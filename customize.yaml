@@ -1,0 +1,4 @@
+sensor.hacs:
+  friendly_name: HACS Updates
+automation.leaving_work:
+  icon: mdi:briefcase
