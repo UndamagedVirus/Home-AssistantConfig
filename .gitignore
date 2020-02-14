@@ -9,6 +9,8 @@
 !*.yaml
 !.gitignore
 !*.md
+.jpg
+.png
 
 # Ignore folders.
 .storage
@@ -23,3 +25,7 @@ home-assistant_v2.db
 home-assistant.log
 HA.code-workspace
 HA.workspace
+fb2.png
+fraser2.png
+julie2.png
+julie.jpg

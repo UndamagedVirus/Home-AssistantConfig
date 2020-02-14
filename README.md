@@ -1,8 +1,9 @@
 # UndamagedVirus Home Assistant 
 
-![shield2](https://img.shields.io/badge/Home%20Assistant-0.105.3-green.svg "HA version")
-![shield1](https://img.shields.io/github/last-commit/UndamagedVirus/Home-AssistantConfig.svg "last-commit")
+![shield1](https://img.shields.io/badge/Home%20Assistant-0.105.3-green.svg "HA version")
+![shield2](https://img.shields.io/github/last-commit/UndamagedVirus/Home-AssistantConfig.svg "last-commit")
 ![shield3](https://img.shields.io/github/commit-activity/m/UndamagedVirus/Home-AssistantConfig.svg?style=flat-square "Commit Activity")
+
 
 
 **This is currently a work in process**
