@@ -11,6 +11,8 @@
 !*.md
 .jpg
 .png
+.yml
+.HA_VERSION
 
 # Ignore folders.
 .storage
@@ -25,6 +27,8 @@ home-assistant_v2.db
 home-assistant.log
 HA.code-workspace
 HA.workspace
+_config.yml
+.HA_VERSION
 fb2.png
 fraser2.png
 julie2.png
