@@ -4,7 +4,6 @@ default_config:
 
 homeassistant:
   customize: !include customize.yaml
-
 frontend:
   themes: !include_dir_merge_named themes
 
@@ -32,6 +31,16 @@ sensor:
     locations:
       - dundee
 
+  - platform: openhardwaremonitor
+    host: 192.168.0.19
+    
+  - platform: template
+    sensors:
+     ps4_game:
+         friendly_name: "Playstation 4 Now Playing"
+         value_template: "{{ state_attr('media_player.playstation_4', 'media_title') }}"
+         
+    
 weather:
   - platform: darksky
     api_key: !secret darksky
@@ -48,6 +57,11 @@ speedtestdotnet:
 spotify:
   client_id: !secret spotifyid
   client_secret: !secret spotifysecret
+
+device_tracker:
+  - platform: sky_hub
+
+
 
 panel_iframe:
   tautulli:

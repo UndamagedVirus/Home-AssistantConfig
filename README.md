@@ -6,14 +6,14 @@
 
 
 
-**This is currently a work in process**
+### ** **THIS IS CURRENTLY A WORK IN PROGRESS** **
 
-##### Hardware Used:
+### Hardware Used:
 [Raspberry Pi 3+](https://www.amazon.co.uk/gp/product/B07BDR5PDW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8psc=1)
 
 [GeeekPi Case](https://www.amazon.co.uk/gp/product/B07BBFRLNJ/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 
-##### Components:
+### Components:
 
 [HACS](https://github.com/hacs/integration)
 
@@ -37,10 +37,16 @@
 
 [slider-entity-row](https://github.com/thomasloven/lovelace-slider-entity-row)
 
-##### Current Theme:
+### Intergration:
+
+Spotify
+
+Playstation 4
+
+### Current Theme:
 
 [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
 
-##### Automations Set Up:
+### Automations Set Up:
 
-##### Scripts Set Up:
+### Scripts Set Up:

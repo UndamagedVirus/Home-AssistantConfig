@@ -17,5 +17,19 @@
       condition: time
   action:
   - data:
+      icon: mdi:dumbbell
       message: Fraser Has Arrived At Work
     service: notify.mobile_app_sm_g960f
+- id: '1581875907205'
+  alias: Fraser Has Arrived At The Gym
+  description: ''
+  trigger:
+  - entity_id: person.fraser
+    event: enter
+    platform: zone
+    zone: zone.pure_gym
+  condition: []
+  action:
+  - data:
+      message: Fraser is at the gym
+    service: tts.cloud_say

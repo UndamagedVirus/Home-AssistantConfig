@@ -20,6 +20,8 @@ resources:
     type: module
   - url: /local/slider-entity-row.js
     type: module
+
+    
     
 title: My Awesome Home
 views:
@@ -82,7 +84,6 @@ views:
          state: false
          graph: bar
 
-
       - type: custom:vertical-stack-in-card
         cards:
           - type: custom:weather-card
@@ -138,7 +139,7 @@ views:
       - type: entities
         entities: 
             - automation.leaving_work
-        
+            - automation.fraser_has_arrived_at_the_gym
   
   - icon: mdi:raspberry-pi
     path: Status
@@ -159,20 +160,50 @@ views:
                 - sensor.processor_use
                 - sensor.memory_free
                 - sensor.memory_use
-  
+                
+      - type: custom:vertical-stack-in-card
+        title: PC 
+        align: centre
+        cards: 
+            - type: entities
+              entities:
+               - sensor.fraser_nvidia_geforce_gtx_1070_temperatures_gpu_core
+               - sensor.fraser_intel_core_i7_4770k_temperatures_cpu_package
+            - type: glance
+              entities: 
+                - sensor.fraser_generic_hard_disk_load_used_space_2
+                - sensor.fraser_generic_hard_disk_load_used_space
+                - sensor.fraser_sandisk_ssd_plus_480gb_load_used_space
+                - sensor.fraser_samsung_ssd_850_evo_250gb_load_used_space
+                - sensor.fraser_st500dm002_1bd142_load_used_space
+              
+      - type: custom:mini-media-player
+        entity: media_player.playstation_4
+        artwork: cover
+        hide:
+         volume: true
+         source: true
+         power_state: false
+         
+         
   - title: Testing
     path: Testing
     cards:
     
       - type: custom:unused-card
       
-      - type: entities
-        entities:
-            - sun.sun
-            - weather.home
-            - binary_sensor.remote_ui
-      
-      
+      - type: custom:mini-media-player
+        entity: media_player.playstation_4
+        icon: mdi:spotify
+        artwork: cover
+        source: icon
+        hide:
+            volume: true
+            source: false
+            power_state: false   
+              
+            
+
       
       
       

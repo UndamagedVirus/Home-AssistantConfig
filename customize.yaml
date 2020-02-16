@@ -2,3 +2,19 @@ sensor.hacs:
   friendly_name: HACS Updates
 automation.leaving_work:
   icon: mdi:briefcase
+sensor.fraser_sandisk_ssd_plus_480gb_load_used_space:
+  friendly_name: Game SSD
+sensor.fraser_samsung_ssd_850_evo_250gb_load_used_space:
+  friendly_name: System SSD
+sensor.fraser_generic_hard_disk_load_used_space:
+  friendly_name: 'Plex #2'
+sensor.fraser_generic_hard_disk_load_used_space_2:
+  friendly_name: 'Plex #1'
+sensor.fraser_st500dm002_1bd142_load_used_space:
+  friendly_name: Local Hard Drive
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_temperatures_cpu_core:
+  friendly_name: CPU Temp.
+sensor.fraser_nvidia_geforce_gtx_1070_temperatures_gpu_core:
+  friendly_name: GPU Tamp.
+automation.fraser_has_arrived_at_the_gym:
+  icon: mdi:dumbbell
