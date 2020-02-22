@@ -15,6 +15,33 @@ sensor.fraser_st500dm002_1bd142_load_used_space:
 sensor.fraser_asus_z87_c_nuvoton_nct6791d_temperatures_cpu_core:
   friendly_name: CPU Temp.
 sensor.fraser_nvidia_geforce_gtx_1070_temperatures_gpu_core:
-  friendly_name: GPU Tamp.
+  friendly_name: GPU Temp.
 automation.fraser_has_arrived_at_the_gym:
   icon: mdi:dumbbell
+script.1581951130767:
+  can_cancel: 'false'
+  friendly_name: The Warriors
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_1:
+  friendly_name: 'PC Mobo Fan Control #1'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_2:
+  friendly_name: 'PC Mobo Fan Control #2'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_3:
+  friendly_name: 'PC Mobo Fan Control #3'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_4:
+  friendly_name: 'PC Mobo Fan Control #4'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_5:
+  friendly_name: 'PC Mobo Fan Control #5'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_6:
+  friendly_name: 'PC Mobo Fan Control #6'
+sensor.fraser_sandisk_ssd_plus_480gb_temperatures_temperature:
+  friendly_name: SSD 480GB Temperature
+sensor.fraser_samsung_ssd_850_evo_250gb_temperatures_temperature:
+  friendly_name: ' SSD 250GB Temperature'
+device_tracker.huawei_p20_pro_85a84a8637:
+  friendly_name: HUAWEI P20 Pro
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_fans_fan_1:
+  friendly_name: 'PC Mobo Fan #1'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_fans_fan_2:
+  friendly_name: 'PC Mobo Fan #2'
+sensor.fraser_asus_z87_c_nuvoton_nct6791d_fans_fan_3:
+  friendly_name: 'PC Mobo Fan #3'

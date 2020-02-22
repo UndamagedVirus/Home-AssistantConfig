@@ -20,6 +20,7 @@
       icon: mdi:dumbbell
       message: Fraser Has Arrived At Work
     service: notify.mobile_app_sm_g960f
+    
 - id: '1581875907205'
   alias: Fraser Has Arrived At The Gym
   description: ''

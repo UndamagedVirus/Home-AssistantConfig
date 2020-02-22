@@ -70,20 +70,39 @@ views:
         entity: weather.dark_sky
         name: Dundee
 
+      - type: custom:swipe-card
+        cards: 
+          - type: custom:mini-graph-card
+            entities:
+                - sensor.speedtest_download
+                - sensor.speedtest_upload
+            name: Speedtest
+            hour24: true
+            hours_to_show: 48
+            lower_bound: 0
+            points_per_hour: 1
+            show:
+              extrema: false
+              fill: fade
+              labels: false 
+              legend: false
+              average: true
+          - type: custom:mini-graph-card
+            entities:
+                - sensor.speedtest_ping
+            name: Speedtest Ping
+            hour24: true
+            hours_to_show: 48
+            lower_bound: 0
+            points_per_hour: 1
+            show:
+              extrema: false
+              fill: fade
+              labels: false 
+              legend: false
+              average: true
 
-      - type: custom:mini-graph-card
-        entities:
-            - sensor.speedtest_ping
-            - sensor.speedtest_upload
-            - sensor.speedtest_download
-        name: Speedtest
-        hours_to_show: 72
-        show:
-         icon: false
-         name: true
-         state: false
-         graph: bar
-
+              
       - type: custom:vertical-stack-in-card
         cards:
           - type: custom:weather-card
@@ -132,14 +151,8 @@ views:
   - icon: mdi:lightbulb-on
     path: Lighting 
   
-  - title: Automations
-    path: Automations
-    cards:
-    
-      - type: entities
-        entities: 
-            - automation.leaving_work
-            - automation.fraser_has_arrived_at_the_gym
+
+              
   
   - icon: mdi:raspberry-pi
     path: Status
@@ -184,12 +197,34 @@ views:
          volume: true
          source: true
          power_state: false
-         
+
+  - title: Automations
+    path: Automations
+    cards:
+    
+      - type: entities
+        title: Notifications
+        show_header_toggle: false
+        entities: 
+            - automation.leaving_work
+            - automation.fraser_has_arrived_at_the_gym
+            
+      - type: entities
+        title: PS4 Games 
+        show_header_toggle: false
+        entities:
+            - script.1581951130767         
          
   - title: Testing
     path: Testing
     cards:
     
+      - type: shopping-list
+        title: Shopping List
+      - type: glance
+        entities:
+            - device_tracker.xboxone
+            - sensor.xbox_one
       - type: custom:unused-card
       
       - type: custom:mini-media-player
@@ -201,7 +236,13 @@ views:
             volume: true
             source: false
             power_state: false   
+            
               
+      - type: glance
+        entities: 
+          - sensor.weight
+          - sensor.tracker_steps
+          - sensor.resting_heart_rate
             
 
       

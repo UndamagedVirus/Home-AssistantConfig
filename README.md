@@ -1,6 +1,6 @@
 # UndamagedVirus Home Assistant 
 
-![shield1](https://img.shields.io/badge/Home%20Assistant-0.105.3-green.svg "HA version")
+![shield1](https://img.shields.io/badge/Home%20Assistant-0.105.4-green.svg "HA version")
 ![shield2](https://img.shields.io/github/last-commit/UndamagedVirus/Home-AssistantConfig.svg "last-commit")
 ![shield3](https://img.shields.io/github/commit-activity/m/UndamagedVirus/Home-AssistantConfig.svg?style=flat-square "Commit Activity")
 
@@ -37,11 +37,17 @@
 
 [slider-entity-row](https://github.com/thomasloven/lovelace-slider-entity-row)
 
-### Intergration:
+### Intergrations:
+
+Google Cast
+
+Home Assistant Mobile App
 
 Spotify
 
 Playstation 4
+
+Plex
 
 ### Current Theme:
 
