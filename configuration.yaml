@@ -85,7 +85,10 @@ panel_iframe:
 device_tracker:
   - platform: sky_hub
     host: 192.168.0.1
-    
+
+google:
+  client_id: !secret googleid
+  client_secret: !secret googlesecret
 
     
 shopping_list:

@@ -8,8 +8,6 @@ resources:
     type: module
   - url: /community_plugin/lovelace-card-mod/card-mod.js
     type: module
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
-    type: js
   - url: /community_plugin/unused-card/unused-card.js
     type: module
   - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
@@ -20,6 +18,10 @@ resources:
     type: module
   - url: /local/slider-entity-row.js
     type: module
+  - url: /community_plugin/calendar-card/calendar-card.js
+    type: js
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+    type: js
 
     
     
@@ -121,11 +123,11 @@ views:
              points: hover
              average: true
       
-
+      
       - type: glance
         entities:   
             - binary_sensor.updater
-                
+
 
       - type: vertical-stack
         cards:
@@ -245,12 +247,6 @@ views:
           - sensor.resting_heart_rate
             
 
-      
-      
-      
-      
-      
-      
       
       
       
