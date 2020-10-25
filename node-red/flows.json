@@ -1,1 +1,1 @@
-[{"id":"a65f8c03.3f672","type":"server","z":"","name":"Home Assistant","url":"http://hassio/homeassistant","pass":"9848029de89b7ec9b3239b49b879436c2e1204beed11a48f3e1a2cf94e1dbb5bb58020d82089f8f518b5d32d28d8d9929adf52aaef19855f"}]
+[{"id":"a65f8c03.3f672","type":"server","z":"","name":"Home Assistant","addon":true}]

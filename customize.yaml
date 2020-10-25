@@ -21,6 +21,7 @@ automation.fraser_has_arrived_at_the_gym:
 script.1581951130767:
   can_cancel: 'false'
   friendly_name: The Warriors
+  icon: mdi:playstation
 sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_1:
   friendly_name: 'PC Mobo Fan Control #1'
 sensor.fraser_asus_z87_c_nuvoton_nct6791d_controls_fan_control_2:
@@ -45,3 +46,12 @@ sensor.fraser_asus_z87_c_nuvoton_nct6791d_fans_fan_2:
   friendly_name: 'PC Mobo Fan #2'
 sensor.fraser_asus_z87_c_nuvoton_nct6791d_fans_fan_3:
   friendly_name: 'PC Mobo Fan #3'
+script.1584250392152:
+  can_cancel: 'false'
+  icon: mdi:playstation
+script.1584250501993:
+  can_cancel: 'false'
+  icon: mdi:netflix
+script.1584250350664:
+  can_cancel: 'false'
+  icon: mdi:playstation

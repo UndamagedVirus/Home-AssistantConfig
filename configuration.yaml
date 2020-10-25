@@ -55,8 +55,6 @@ sensor:
       - "activities/heart"
 
 
-        
-
     
 weather:
   - platform: darksky
@@ -82,16 +80,14 @@ panel_iframe:
     icon: mdi:filmstrip
     url: http://hassio.local:8181
     
-device_tracker:
-  - platform: sky_hub
-    host: 192.168.0.1
+
 
 google:
   client_id: !secret googleid
   client_secret: !secret googlesecret
 
     
-shopping_list:
+
 breaking_changes:
 
 # Text to speech
@@ -102,3 +98,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+

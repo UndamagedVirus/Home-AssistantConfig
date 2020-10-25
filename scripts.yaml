@@ -5,3 +5,25 @@
       source: The Warriors
     entity_id: media_player.playstation_4
     service: media_player.select_source
+'1584250350664':
+  alias: The Division 2
+  sequence:
+  - data:
+      soruce: Tom Clancy's The Division® 2
+    entity_id: media_player.playstation_4
+    service: media_player.select_source
+'1584250392152':
+  alias: Gang Beasts
+  sequence:
+  - data:
+      source: Gang Beasts
+    entity_id: media_player.playstation_4
+    service: media_player.select_source
+  mode: single
+'1584250501993':
+  alias: Netflix
+  sequence:
+  - data:
+      source: Netflix
+    entity_id: media_player.playstation_4
+    service: media_player.select_source

@@ -1,27 +1,26 @@
-custom_header:
-  compact_mode: true
 background: var(--background-image)
 resources:
-  - url: /community_plugin/weather-card/weather-card.js
+  - url: /hacsfiles/weather-card/weather-card.js
     type: module
-  - url: /community_plugin/custom-header/custom-header.js
+  - url: /hacsfiles/lovelace-card-mod/card-mod.js
     type: module
-  - url: /community_plugin/lovelace-card-mod/card-mod.js
+  - url: /hacsfiles/unused-card/unused-card.js
     type: module
-  - url: /community_plugin/unused-card/unused-card.js
-    type: module
-  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+  - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
     type: module
   - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/swipe-card/swipe-card.js
     type: module
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
-  - url: /local/slider-entity-row.js
+  - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
     type: module
-  - url: /community_plugin/calendar-card/calendar-card.js
-    type: js
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
-    type: js
+  - url: /hacsfiles/calendar-card/calendar-card.js
+    type: module
+  - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
+    type: module
+  - url: /hacsfiles/banner-card/banner-card.js
+    type: module
+    
 
     
     
@@ -38,9 +37,7 @@ views:
             show_name: false
             show_state: false
             show_info: false
-            state_image:
-                "home": /local/assets/people/fb2.png
-                "not_home": /local/assets/people/fraser2.png
+            image: person.fraser
             tap_action:
                 action: none
             style: |
@@ -68,9 +65,7 @@ views:
               overflow: hidden;
              }
              
-      - type: custom:weather-card
-        entity: weather.dark_sky
-        name: Dundee
+
 
       - type: custom:swipe-card
         cards: 
@@ -123,31 +118,6 @@ views:
              points: hover
              average: true
       
-      
-      - type: glance
-        entities:   
-            - binary_sensor.updater
-
-
-      - type: vertical-stack
-        cards:
-          - type: custom:mini-media-player
-            entity: media_player.bedroom_speaker
-            icon: mdi:spotify
-            artwork: cover
-            source: icon
-            hide:
-             volume: true
-             source: true
-             power_state: false    
-          - type: custom:mini-media-player
-            entity: media_player.living_room_speaker
-            icon: mdi:spotify
-            artwork: cover
-            hide:
-             volume: true
-             source: true
-             power_state: false     
 
            
   - icon: mdi:lightbulb-on
@@ -165,16 +135,22 @@ views:
             - type: entities
               entities:
                 - sensor.current_version
-                - sensor.uptime
-                - sensor.potential_breaking_changes
+                - binary_sensor.updater
                 - sensor.hacs
+                - sensor.potential_breaking_changes
+                - sensor.uptime
                 - sensor.last_boot
                 - sensor.disk_use_home
+
+                
             - type: glance
               entities:
                 - sensor.processor_use
                 - sensor.memory_free
                 - sensor.memory_use
+            
+    
+
                 
       - type: custom:vertical-stack-in-card
         title: PC 
@@ -208,26 +184,26 @@ views:
         title: Notifications
         show_header_toggle: false
         entities: 
-            - automation.leaving_work
-            - automation.fraser_has_arrived_at_the_gym
+
             
       - type: entities
         title: PS4 Games 
         show_header_toggle: false
         entities:
-            - script.1581951130767         
+            - script.1581951130767  
+            - script.1584250350664
+            - script.1584250392152
+            - script.1584250501993
          
   - title: Testing
     path: Testing
     cards:
     
-      - type: shopping-list
-        title: Shopping List
+
       - type: glance
         entities:
             - device_tracker.xboxone
             - sensor.xbox_one
-      - type: custom:unused-card
       
       - type: custom:mini-media-player
         entity: media_player.playstation_4
@@ -238,14 +214,65 @@ views:
             volume: true
             source: false
             power_state: false   
-            
-              
+
       - type: glance
         entities: 
           - sensor.weight
           - sensor.tracker_steps
           - sensor.resting_heart_rate
+          
+      - type: custom:vertical-stack-in-card
+        title: PC 
+        align: centre
+        cards: 
+            - type: entities
+              entities:
+               - sensor.sky_adsl_router_b_sent
+               - sensor.sky_adsl_router_b_received
+            - type: glance
+              entities: 
+                - sensor.sky_adsl_router_kib_s_sent
+                - sensor.sky_adsl_router_packets_s_received
+                
+      - type: custom:banner-card
+        entity: sensor.els_nx9_battery_health
+        name: Reading light
+        value: mdi:book-open-page-variant
+        action:
+          service: light.turn_on
+          brightness: 50
+
+              
+      - type: custom:banner-card
+        heading:
+          - mdi:sony-playstation
+          - PS4 Games
+        background: "#B0C2ED"
+        link: /lovelace/bathroom
+        entities:
+          - entity: script.1584250392152
+            name: Gang Beasts
+            action: 
+                service: script.1584250392152
+          - entity: script.1584250501993
+            name: Netflix
+            action: 
+                service: script.1584250501993
+                
+      - type: custom:vertical-stack-in-card
+        title: SpaceX
+        cards:
+            - type: entities
+              entities:
+                - sensor.next_launch_mission
+                - binary_sensor.next_launch_confirmed
+                - sensor.next_launch_day
+                - sensor.next_launch_time
+                - sensor.next_launch_site
+                - sensor.next_launch_rocket
+                - sensor.next_launch_payload
             
+      - type: custom:unused-card
 
       
       
